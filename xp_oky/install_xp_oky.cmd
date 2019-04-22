@@ -1,0 +1,5 @@
+copy /Y xp_oky.dll "C:\Program Files\Microsoft SQL Server\MSSQL\Binn"
+osql -S (local) -d MASTER -U sa -P sa -Q "EXEC sp_addextendedproc 'xp_envar', 'xp_oky.dll'"
+osql -S (local) -d MASTER -U sa -P sa -Q "EXEC sp_addextendedproc 'xp_hello', 'xp_oky.dll'"
+osql -S (local) -d MASTER -U sa -P sa -Q "EXEC sp_addextendedproc 'xp_hello1', 'xp_oky.dll'"
+osql -S (local) -d MASTER -U sa -P sa -Q "EXEC sp_addextendedproc 'xp_svclist', 'xp_oky.dll'"

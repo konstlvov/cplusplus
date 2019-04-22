@@ -1,0 +1,186 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!-- C++Builder XML Project -->
+<PROJECT>
+  <MACROS>
+    <VERSION value="BCB.06.00"/>
+    <PROJECT value="xp_oky.dll"/>
+    <OBJFILES value="u_xp_oky.obj UImpl.obj USvcList.obj UEnvVarList.obj CommonAux.obj"/>
+    <RESFILES value="xp_oky.res"/>
+    <IDLFILES value=""/>
+    <IDLGENFILES value=""/>
+    <DEFFILE value=""/>
+    <RESDEPEN value="$(RESFILES)"/>
+    <LIBFILES value=""/>
+    <LIBRARIES value="vcl.lib rtl.lib"/>
+    <SPARELIBS value="rtl.lib vcl.lib"/>
+    <PACKAGES value="vcl.bpi rtl.bpi dbrtl.bpi adortl.bpi vcldb.bpi vclx.bpi bdertl.bpi 
+      vcldbx.bpi ibxpress.bpi dsnap.bpi cds.bpi bdecds.bpi teeui.bpi teedb.bpi 
+      tee.bpi dss.bpi teeqr.bpi visualclx.bpi visualdbclx.bpi dsnapcrba.bpi 
+      dsnapcon.bpi bcbsmp.bpi vclie.bpi xmlrtl.bpi inet.bpi inetdbbde.bpi 
+      inetdbxpress.bpi inetdb.bpi nmfast.bpi webdsnap.bpi bcbie.bpi websnap.bpi 
+      soaprtl.bpi dclocx.bpi dbexpress.bpi dbxcds.bpi indy.bpi bcb2kaxserver.bpi 
+      Crystal.bpi qrpt.bpi RBComp.bpi"/>
+    <PATHCPP value=".;"/>
+    <PATHPAS value=".;"/>
+    <PATHRC value=".;"/>
+    <PATHASM value=".;"/>
+    <DEBUGLIBPATH value="$(BCB)\lib\debug"/>
+    <RELEASELIBPATH value="$(BCB)\lib\release"/>
+    <LINKER value="ilink32"/>
+    <USERDEFINES value="_DEBUG"/>
+    <SYSDEFINES value="NO_STRICT"/>
+    <MAINSOURCE value="xp_oky.bpf"/>
+    <INCLUDEPATH value="..\EnvVarTester;..;xp_oky;$(BCB)\include;$(BCB)\include\vcl"/>
+    <LIBPATH value="..\EnvVarTester;$(BCB)\lib;..;$(BCB)\Projects\Lib;xp_oky;$(BCB)\lib\obj"/>
+    <WARNINGS value="-w-par"/>
+    <OTHERFILES value=""/>
+  </MACROS>
+  <OPTIONS>
+    <IDLCFLAGS value="-I..\EnvVarTester -I.. -Ixp_oky -I$(BCB)\include -I$(BCB)\include\vcl 
+      -src_suffix cpp -D_DEBUG -boa"/>
+    <CFLAG1 value="-WD -Od -H=$(BCB)\lib\vcl60.csm -Hc -Vx -Ve -u- -X- -r- -a8 -b- -k -y -v 
+      -vi- -tWD -tWM -c"/>
+    <PFLAGS value="-$YD -$W -$O- -$A8 -v -JPHNE -M"/>
+    <RFLAGS value=""/>
+    <AFLAGS value="/mx /w2 /zd"/>
+    <LFLAGS value="-D&quot;&quot; -aa -Tpd -x -Gn -Gi -v"/>
+    <OTHERFILES value=""/>
+  </OPTIONS>
+  <LINKER>
+    <ALLOBJ value="c0d32.obj sysinit.obj $(OBJFILES)"/>
+    <ALLRES value="$(RESFILES)"/>
+    <ALLLIB value="$(LIBFILES) $(LIBRARIES) import32.lib cp32mt.lib"/>
+    <OTHERFILES value=""/>
+  </LINKER>
+  <FILELIST>
+      <FILE FILENAME="readme.txt" FORMNAME="" UNITNAME="readme.txt" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="xp_oky.res" FORMNAME="" UNITNAME="xp_oky.res" CONTAINERID="ResTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="xp_oky.bpf" FORMNAME="" UNITNAME="xp_oky" CONTAINERID="BPF" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="u_xp_oky.cpp" FORMNAME="" UNITNAME="u_xp_oky" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="UImpl.cpp" FORMNAME="" UNITNAME="UImpl" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="USvcList.cpp" FORMNAME="" UNITNAME="USvcList" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="UEnvVarList.cpp" FORMNAME="" UNITNAME="UEnvVarList" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="CommonAux.cpp" FORMNAME="" UNITNAME="CommonAux" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="install_xp_oky.cmd" FORMNAME="" UNITNAME="install_xp_oky.cmd" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="uninstall_xp_oky.cmd" FORMNAME="" UNITNAME="uninstall_xp_oky.cmd" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="exec_xp_hello.sql" FORMNAME="" UNITNAME="exec_xp_hello.sql" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="exec_xp_hello1.sql" FORMNAME="" UNITNAME="exec_xp_hello1.sql" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="exec_xp_envar.sql" FORMNAME="" UNITNAME="exec_xp_envar.sql" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="exec_xp_svclist.sql" FORMNAME="" UNITNAME="exec_xp_svclist.sql" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+  </FILELIST>
+  <BUILDTOOLS>
+  </BUILDTOOLS>
+
+  <FILES>
+    <FILE type="override" value="USvcList.cpp" translator="Auto">
+      <CFLAG1 value=" -u"/>
+    </FILE>
+    <FILE type="override" value="UEnvVarList.cpp" translator="Auto">
+      <CFLAG1 value=" -u"/>
+    </FILE>
+    <FILE type="override" value="UImpl.cpp" translator="Auto">
+      <CFLAG1 value=" -u"/>
+    </FILE>
+  </FILES>
+
+  <IDEOPTIONS>
+[Version Info]
+IncludeVerInfo=1
+AutoIncBuild=0
+MajorVer=1
+MinorVer=0
+Release=0
+Build=0
+Debug=0
+PreRelease=0
+Special=0
+Private=0
+DLL=1
+Locale=1049
+CodePage=1251
+
+[Version Info Keys]
+CompanyName=Русь-Банк
+FileDescription=Расширенные хранимые процедуры для MS SQL Server
+FileVersion=1.0.0.0
+InternalName=xp_oky.dll
+LegalCopyright=
+LegalTrademarks=
+OriginalFilename=xp_oky.dll
+ProductName=xp_oky.dll
+ProductVersion=1.0.0.0
+Comments=Константин Львов
+
+[Excluded Packages]
+c:\program files\borland\cbuilder6\Projects\Bpl\cr9cvcl.bpl=(untitled)
+c:\program files\borland\cbuilder6\Projects\Bpl\craxdrt9.bpl=(untitled)
+c:\program files\borland\cbuilder6\Projects\Bpl\crviewer9.bpl=(untitled)
+
+[HistoryLists\hlIncludePath]
+Count=4
+Item0=..\EnvVarTester;..;xp_oky;$(BCB)\include;$(BCB)\include\vcl
+Item1=..;xp_oky;$(BCB)\include;$(BCB)\include\vcl
+Item2=..\;xp_oky;$(BCB)\include;$(BCB)\include\vcl
+Item3=xp_oky;$(BCB)\include;$(BCB)\include\vcl
+
+[HistoryLists\hlLibraryPath]
+Count=9
+Item0=..\EnvVarTester;$(BCB)\lib;..;$(BCB)\Projects\Lib;xp_oky;$(BCB)\lib\obj
+Item1=$(BCB)\lib;..;$(BCB)\Projects\Lib;xp_oky;$(BCB)\lib\obj;
+Item2=..;$(BCB)\Projects\Lib;xp_oky;$(BCB)\lib\obj;$(BCB)\lib
+Item3=..;$(BCB)\Projects\Lib;xp_oky;$(BCB)\lib\obj;$(BCB)\lib;
+Item4=..;$(BCB)\Projects\Lib;xp_oky;$(BCB)\lib\obj;$(BCB)\lib;$(BCB)\lib\psdk
+Item5=..\;$(BCB)\Projects\Lib;xp_oky;$(BCB)\lib\obj;$(BCB)\lib;$(BCB)\lib\psdk
+Item6=$(BCB)\Projects\Lib;xp_oky;$(BCB)\lib\obj;$(BCB)\lib;$(BCB)\lib\psdk
+Item7=$(BCB)\Projects\Lib;xp_oky;$(BCB)\lib\obj;$(BCB)\lib; $(BCB)\lib\psdk
+Item8=$(BCB)\Projects\Lib;xp_oky;$(BCB)\lib\obj;$(BCB)\lib
+
+[HistoryLists\hlDebugSourcePath]
+Count=1
+Item0=$(BCB)\source\vcl
+
+[HistoryLists\hlConditionals]
+Count=1
+Item0=_DEBUG
+
+[HistoryLists\hlFinalOutputDir]
+Count=2
+Item0=C:\Program Files\Microsoft SQL Server\MSSQL\Binn\
+Item1=C:\Program Files\Microsoft SQL Server\MSSQL\Binn
+
+[Debugging]
+DebugSourceDirs=$(BCB)\source\vcl
+
+[Parameters]
+RunParams=
+Launcher=
+UseLauncher=0
+DebugCWD=
+HostApplication=C:\Program Files\Microsoft SQL Server\MSSQL\Binn\sqlservr.exe
+RemoteHost=
+RemotePath=
+RemoteLauncher=
+RemoteCWD=
+RemoteDebug=0
+
+[Compiler]
+ShowInfoMsgs=0
+LinkDebugVcl=0
+LinkCGLIB=0
+
+[CORBA]
+AddServerUnit=1
+AddClientUnit=1
+PrecompiledHeaders=1
+
+[Language]
+ActiveLang=
+ProjectLang=
+RootDir=
+
+[Linker]
+LibPrefix=
+LibSuffix=
+LibVersion=
+  </IDEOPTIONS>
+</PROJECT>

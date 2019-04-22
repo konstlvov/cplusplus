@@ -1,0 +1,6 @@
+osql -S (local) -d MASTER -U sa -P sa -Q "USE master EXEC sp_dropextendedproc 'xp_envar'"
+osql -S (local) -d MASTER -U sa -P sa -Q "USE master EXEC sp_dropextendedproc 'xp_hello'"
+osql -S (local) -d MASTER -U sa -P sa -Q "USE master EXEC sp_dropextendedproc 'xp_hello1'"
+osql -S (local) -d MASTER -U sa -P sa -Q "USE master EXEC sp_dropextendedproc 'xp_svclist'"
+osql -S (local) -d MASTER -U sa -P sa -Q "USE master dbcc xp_oky(FREE)"
+del "C:\Program Files\Microsoft SQL Server\MSSQL\Binn\xp_oky.dll"
