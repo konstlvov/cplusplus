@@ -1,0 +1,1 @@
+nmake /f DevHelper.mak CFG="DevHelper - Win32 Unicode Release MinDependency"

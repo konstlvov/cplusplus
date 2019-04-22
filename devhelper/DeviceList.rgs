@@ -1,0 +1,26 @@
+HKCR
+{
+	DevHelper.DeviceList.1 = s 'DeviceList Class'
+	{
+		CLSID = s '{D539E1FB-87BD-4F82-B68B-7CE4422A9F98}'
+	}
+	DevHelper.DeviceList = s 'DeviceList Class'
+	{
+		CLSID = s '{D539E1FB-87BD-4F82-B68B-7CE4422A9F98}'
+		CurVer = s 'DevHelper.DeviceList.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {D539E1FB-87BD-4F82-B68B-7CE4422A9F98} = s 'DeviceList Class'
+		{
+			ProgID = s 'DevHelper.DeviceList.1'
+			VersionIndependentProgID = s 'DevHelper.DeviceList'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{2620962C-C30A-49BA-90C8-E2FFACFEF03B}'
+		}
+	}
+}

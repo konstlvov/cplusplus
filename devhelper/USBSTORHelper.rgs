@@ -1,0 +1,26 @@
+HKCR
+{
+	DevHelper.USBSTORHelper.1 = s 'USBSTORHelper Class'
+	{
+		CLSID = s '{39FD12D3-0864-4001-87F2-B0ED07EB33DD}'
+	}
+	DevHelper.USBSTORHelper = s 'USBSTORHelper Class'
+	{
+		CLSID = s '{39FD12D3-0864-4001-87F2-B0ED07EB33DD}'
+		CurVer = s 'DevHelper.USBSTORHelper.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {39FD12D3-0864-4001-87F2-B0ED07EB33DD} = s 'USBSTORHelper Class'
+		{
+			ProgID = s 'DevHelper.USBSTORHelper.1'
+			VersionIndependentProgID = s 'DevHelper.USBSTORHelper'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{2620962C-C30A-49BA-90C8-E2FFACFEF03B}'
+		}
+	}
+}

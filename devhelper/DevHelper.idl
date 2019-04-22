@@ -1,0 +1,69 @@
+// DevHelper.idl : IDL source for DevHelper.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (DevHelper.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+	[
+		object,
+		uuid(ED2B2A04-F3D4-448E-A24C-793D534FC7DB),
+		dual,
+		helpstring("IDeviceList Interface"),
+		pointer_default(unique)
+	]
+	interface IDeviceList : IDispatch
+	{
+		[propget, id(1), helpstring("property Count")] HRESULT Count([out, retval] long *pVal);
+		[id(2), helpstring("method Refresh")] HRESULT Refresh();
+		[propget, id(3), helpstring("property Description")] HRESULT Description([in] long Index, [out, retval] BSTR *pVal);
+		[propget, id(4), helpstring("property LocationInformation")] HRESULT LocationInformation([in] long Index, [out, retval] BSTR *pVal);
+		[propget, id(5), helpstring("property Handle")] HRESULT Handle([in] long Index, [out, retval] long *pVal);
+		
+		[propget, id(6), helpstring("property FriendlyName")] HRESULT FriendlyName([in] long Index, [out, retval] BSTR *pVal);	
+		[propget, id(7), helpstring("property Service")] HRESULT Service([in] long Index, [out, retval] BSTR *pVal);
+		[propget, id(8), helpstring("property PhysicalDeviceObjectName")] HRESULT PhysicalDeviceObjectName([in] long Index, [out, retval] BSTR *pVal);
+		[propget, id(9), helpstring("property Driver")] HRESULT Driver([in] long Index, [out, retval] BSTR *pVal);
+		[propget, id(10), helpstring("property HardwareID")] HRESULT HardwareID([in] long Index, [out, retval] BSTR *pVal);
+	};
+	[
+		object,
+		uuid(0AFBE008-830E-4378-B02F-06090967B806),
+		dual,
+		helpstring("IUSBSTORHelper Interface"),
+		pointer_default(unique)
+	]
+	interface IUSBSTORHelper : IDispatch
+	{
+		[id(1), helpstring("method StopDevice")] HRESULT StopDevice([in] long DevHandle);
+		//[id(2), helpstring("method DoSomething")] HRESULT DoSomething();
+	};
+
+[
+	uuid(2620962C-C30A-49BA-90C8-E2FFACFEF03B),
+	version(1.0),
+	helpstring("DevHelper 1.0 Type Library")
+]
+library DEVHELPER
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(D539E1FB-87BD-4F82-B68B-7CE4422A9F98),
+		helpstring("DeviceList Class")
+	]
+	coclass DeviceList
+	{
+		[default] interface IDeviceList;
+	};
+	[
+		uuid(39FD12D3-0864-4001-87F2-B0ED07EB33DD),
+		helpstring("USBSTORHelper Class")
+	]
+	coclass USBSTORHelper
+	{
+		[default] interface IUSBSTORHelper;
+	};
+};
