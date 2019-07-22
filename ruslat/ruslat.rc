@@ -1,0 +1,25 @@
+/* Wedit generated resource file */
+#include <windows.h>
+#include "ruslatres.h"
+
+A ICON 1.ico
+B ICON 2.ico
+C ICON 3.ico
+D ICON 4.ico
+E ICON 5.ico
+F ICON 6.ico
+J ICON 7.ico
+K ICON 8.ico
+L ICON 9.ico
+
+POPMENU MENU
+BEGIN
+    POPUP ""
+        BEGIN
+        MENUITEM "Preferences", IDM_PROP
+        MENUITEM "About", IDM_ABOUT
+        MENUITEM "Beep", IDM_RSOUND, CHECKED
+        MENUITEM SEPARATOR
+        MENUITEM "Exit", IDM_EXIT
+        END
+END
